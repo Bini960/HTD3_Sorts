@@ -13,18 +13,18 @@ public class Main {
         IOrdenamiento[] algoritmos = {
             new InsertionSort(),
             new MergeSort(),
-            new QuickSort()
-            // new GnomeSort(),  
-            // new RadixSort()   
+            new QuickSort(),
+            new GnomeSort(),  
+            new RadixSort()   
         };
         
         // Nombres correspondientes para la impresión de resultados
         String[] nombres = {
             "InsertionSort", 
             "MergeSort", 
-            "QuickSort"
-            // "GnomeSort", 
-            // "RadixSort"
+            "QuickSort",
+            "GnomeSort", 
+            "RadixSort"
         };
 
         // Imprime el encabezado de la tabla para facilitar la copia a Excel
