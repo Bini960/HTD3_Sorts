@@ -6,25 +6,25 @@ public class Main {
         GestorArchivos gestor = new GestorArchivos();
         String nombreArchivo = "numeros.txt";
         
-        // Define las cantidades de datos a probar según la Hoja de Trabajo
-        int[] cantidades = {10, 100, 500, 1000, 2000, 3000};
+        // Define las cantidades de datos a probar
+        int[] cantidades = {10, 100, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000};
         
         // Lista polimórfica de algoritmos a evaluar
         IOrdenamiento[] algoritmos = {
             new InsertionSort(),
-            new MergeSort(),
-            new QuickSort(),
-            new GnomeSort(),  
-            new RadixSort()   
+            //new MergeSort(),
+            //new QuickSort(),
+            //new GnomeSort(),  
+            //new RadixSort()   
         };
         
         // Nombres correspondientes para la impresión de resultados
         String[] nombres = {
             "InsertionSort", 
-            "MergeSort", 
-            "QuickSort",
-            "GnomeSort", 
-            "RadixSort"
+            //"MergeSort", 
+            //"QuickSort",
+            //"GnomeSort", 
+            //"RadixSort"
         };
 
         // Imprime el encabezado de la tabla para facilitar la copia a Excel
