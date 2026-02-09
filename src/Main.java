@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
@@ -9,7 +10,6 @@ public class Main {
         int[] cantidades = {10, 100, 500, 1000, 2000, 3000};
         
         // Lista polimórfica de algoritmos a evaluar
-        // Se comentan los pendientes para evitar errores de compilación
         IOrdenamiento[] algoritmos = {
             new InsertionSort(),
             new MergeSort(),
@@ -30,13 +30,12 @@ public class Main {
         // Imprime el encabezado de la tabla para facilitar la copia a Excel
         System.out.println("Algoritmo\tCantidad\tTiempo(ms)\tTipoDatos");
 
-        // Ciclo principal: Itera sobre cada algoritmo disponible
+        // Itera sobre cada algoritmo disponible
         for (int i = 0; i < algoritmos.length; i++) {
             
             // Ciclo secundario: Itera sobre cada cantidad de datos (10, 100... 3000)
             for (int n : cantidades) {
 
-                
                 // DATOS DESORDENADOS 
                 
                 // Genera un archivo nuevo con 'n' números aleatorios
@@ -44,7 +43,7 @@ public class Main {
                 // Lee los datos del archivo a memoria
                 Integer[] datos = gestor.leerArchivo(nombreArchivo);
                 
-                // Toma el tiempo inicial en nanosegundos 
+                // Toma el tiempo inicial en nanosegundos (alta precisión)
                 long inicio = System.nanoTime();
                 
                 // Ejecuta el ordenamiento
@@ -63,7 +62,6 @@ public class Main {
                 // DATOS ORDENADOS 
                 
                 // Reutiliza el arreglo 'datos' que ya fue ordenado en el paso anterior
-                // Esto simula el "Mejor Caso" para algoritmos como InsertionSort
                 
                 inicio = System.nanoTime();
                 algoritmos[i].sort(datos); // Ordena sobre lo ya ordenado
@@ -73,5 +71,18 @@ public class Main {
                 System.out.println(nombres[i] + "\t" + n + "\t" + String.format("%.4f", tiempo).replace(',', '.') + "\tOrdenado");
             }
         }
+
+        // PAUSA PARA PROFILING (VISUALVM / TASK MANAGER)
+        
+        System.out.println("  PROCESO TERMINADO - ESPERANDO USUARIO");
+        System.out.println("  Realice la captura de pantalla de memoria/CPU ahora.");
+        System.out.println("  Presione ENTER para finalizar el programa.");
+
+        // Inicializa el scanner para capturar la entrada del usuario
+        Scanner scanner = new Scanner(System.in);
+        // Detiene el flujo de ejecución hasta recibir un salto de línea (Enter)
+        scanner.nextLine();
+        // Cierra el scanner para liberar recursos del sistema
+        scanner.close();
     }
 }
