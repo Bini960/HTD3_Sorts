@@ -1,8 +1,20 @@
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
+/**
+ * Suite de pruebas para el algoritmo Gnome Sort.
+ * Verifica la correctitud del ordenamiento en diferentes casos:
+ * - Arreglos desordenados básicos
+ * - Números negativos y positivos
+ * - Valores duplicados
+ * 
+ * @author Franco Paiz
+ */
 public class GnomeSortTest {
 
+    /**
+     * Prueba básica del algoritmo con un arreglo desordenado
+     */
     @Test
     public void testGnomeSort() {
         IOrdenamiento gnome = new GnomeSort();
@@ -13,6 +25,9 @@ public class GnomeSortTest {
         assertArrayEquals("Fallo Gnome Sort", expected, input);
     }
 
+    /**
+     * Prueba con números negativos y positivos
+     */
     @Test
     public void testGnomeSortWithNegatives() {
         IOrdenamiento gnome = new GnomeSort();
@@ -23,6 +38,9 @@ public class GnomeSortTest {
         assertArrayEquals("Fallo con negativos", expected, input);
     }
 
+    /**
+     * Prueba con valores duplicados
+     */
     @Test
     public void testGnomeSortWithDuplicates() {
         IOrdenamiento gnome = new GnomeSort();

@@ -1,6 +1,18 @@
+/**
+ * Implementación del algoritmo Radix Sort para números enteros.
+ * Ordena números basándose en sus dígitos individuales.
+ * Separa negativos y positivos para tratarlos por separado.
+ * 
+ * Complejidad: O(nk) donde n es el número de elementos y k es el número de dígitos
+ * @author Franco Paiz
+ */
 public class RadixSort implements IOrdenamiento {
     // Ordena por dígitos. Separa negativos y positivos para tratarlos por separado
 
+    /**
+     * Ordena un arreglo de números enteros usando Radix Sort.
+     * @param datos arreglo de Comparable (números a ordenar)
+     */
     @Override
     public void sort(Comparable[] datos) {
         Integer[] intDatos = new Integer[datos.length];

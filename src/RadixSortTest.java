@@ -1,8 +1,22 @@
 import static org.junit.Assert.assertArrayEquals;
 import org.junit.Test;
 
+/**
+ * Suite de pruebas para el algoritmo Radix Sort.
+ * Verifica el ordenamiento correcto de números en diversos escenarios:
+ * - Números positivos
+ * - Números negativos y positivos mezclados
+ * - Números con diferentes magnitudes (dígitos)
+ * - Ceros
+ * - Arreglos ya ordenados
+ * 
+ * @author Franco Paiz
+ */
 public class RadixSortTest {
 
+    /**
+     * Prueba con números positivos desordenados
+     */
     @Test
     public void testRadixSortPositive() {
         IOrdenamiento radix = new RadixSort();
@@ -13,6 +27,9 @@ public class RadixSortTest {
         assertArrayEquals("Fallo Radix Sort", expected, input);
     }
 
+    /**
+     * Prueba con números negativos y positivos mezclados
+     */
     @Test
     public void testRadixSortWithNegatives() {
         IOrdenamiento radix = new RadixSort();
@@ -23,6 +40,9 @@ public class RadixSortTest {
         assertArrayEquals("Fallo con negativos", expected, input);
     }
 
+    /**
+     * Prueba con números de diferentes magnitudes (1, 2 y 3 dígitos)
+     */
     @Test
     public void testRadixSortDifferentMagnitudes() {
         IOrdenamiento radix = new RadixSort();
@@ -33,6 +53,9 @@ public class RadixSortTest {
         assertArrayEquals("Fallo con magnitudes diferentes", expected, input);
     }
 
+    /**
+     * Prueba con ceros incluidos
+     */
     @Test
     public void testRadixSortWithZeros() {
         IOrdenamiento radix = new RadixSort();
@@ -43,6 +66,9 @@ public class RadixSortTest {
         assertArrayEquals("Fallo con ceros", expected, input);
     }
 
+    /**
+     * Prueba con arreglo ya ordenado
+     */
     @Test
     public void testRadixSortAlreadySorted() {
         IOrdenamiento radix = new RadixSort();
