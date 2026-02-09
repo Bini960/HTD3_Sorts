@@ -1,0 +1,24 @@
+{
+    "java.test.config": {
+        "workingDirectory": "${workspaceFolder}"
+    },
+    "java.test.defaultConfig": "Current File",
+    "testing.automaticallyOpenPeekView": "failureInVisibleDocument",
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "java.dependency.packagePresentation": "flat",
+    "java.configuration.runtimes": [],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar"
+    ],
+    "files.exclude": {
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
+}

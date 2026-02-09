@@ -1,0 +1,7 @@
+{
+    "recommendations": [
+        "vscjava.extensions-pack-for-java",
+        "vscjava.test-runner",
+        "redhat.java"
+    ]
+}
